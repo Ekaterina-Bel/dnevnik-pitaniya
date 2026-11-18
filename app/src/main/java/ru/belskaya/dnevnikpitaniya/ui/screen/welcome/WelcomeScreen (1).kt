@@ -11,6 +11,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -28,7 +30,7 @@ class WelcomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     /** null = ещё проверяем, true = профиль есть, false = новый пользователь */
-    var hasProfile by androidx.compose.runtime.mutableStateOf<Boolean?>(null)
+    var hasProfile by mutableStateOf<Boolean?>(null)
         private set
 
     init {

@@ -37,7 +37,6 @@ import ru.belskaya.dnevnikpitaniya.domain.CalorieCalculator
 import ru.belskaya.dnevnikpitaniya.domain.model.FoodEntry
 import ru.belskaya.dnevnikpitaniya.domain.model.MealType
 
-@OptIn(ExperimentalLayoutApi::class)
 @HiltViewModel
 class AddFoodViewModel @Inject constructor(
     private val repository: FoodRepository,
@@ -87,6 +86,7 @@ class AddFoodViewModel @Inject constructor(
 }
 
 /** Экран 4: Добавление еды (калорийность на 100 г вводится вручную) */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AddFoodScreen(
     viewModel: AddFoodViewModel,
