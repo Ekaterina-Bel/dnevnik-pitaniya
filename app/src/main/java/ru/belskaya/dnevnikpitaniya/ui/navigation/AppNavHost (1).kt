@@ -32,7 +32,7 @@ fun AppNavHost() {
                 viewModel = hiltViewModel(),
                 onDone = {
                     navController.navigate(Routes.HOME) {
-                        popUpTo(0) { inclusive = true }   // назад в приветствие нельзя
+                        popUpTo(0) { inclusive = true }
                     }
                 },
             )
@@ -42,6 +42,7 @@ fun AppNavHost() {
             HomeScreen(
                 viewModel = hiltViewModel(),
                 onAddFood = { navController.navigate(Routes.ADD_FOOD) },
+                onEditProfile = { navController.navigate(Routes.SETUP) },
             )
         }
 
